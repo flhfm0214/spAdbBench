@@ -1,0 +1,3 @@
+PySide6==6.12.0
+wetest-scrcpy==0.4.0
+qrcode==8.2

@@ -1,0 +1,32 @@
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '080404b0',
+          [
+            StringStruct('CompanyName', 'spAdbBench'),
+            StringStruct('FileDescription', 'spAdbBench no-video · ADB 桌面工具箱'),
+            StringStruct('FileVersion', '1.0.0.0'),
+            StringStruct('InternalName', 'spAdbBench-no-video'),
+            StringStruct('LegalCopyright', 'Copyright (c) 2026 spAdbBench'),
+            StringStruct('OriginalFilename', 'spAdbBench-no-video.exe'),
+            StringStruct('ProductName', 'spAdbBench-no-video'),
+            StringStruct('ProductVersion', '1.0.0.0')
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct('Translation', [2052, 1200])])
+  ]
+)

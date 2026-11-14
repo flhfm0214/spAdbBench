@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv.*/
+.deps/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local runtime data and settings
+config/settings.json
+data/
+Screenshots/
+APKs/
+logs/
+*.log
+
+# Bundled/runtime binaries (not source)
+platform-tools/
+platform-tools.*/
+vendor/
+*.exe
+*.dll
+*.pyd
+*.so
+*.dylib
+*.apk
+*.apks
+*.jar
+
+# Build and packaging output
+build/
+dist/
+release/
+.tools/
+*.zip
+*.7z
+*.msi
+*.msix
+*.nupkg
+
+# Internal planning notes
+docs/superpowers/
+**/docs/superpowers/
+
+# Local scratch files
+*.tmp
+*.bak
+ChatGPT Image.png
+启动 *.bat

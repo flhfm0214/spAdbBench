@@ -1,0 +1,22 @@
+{
+  "adb_path": "",
+  "scrcpy_server_path": "",
+  "default_serial": "",
+  "metrics_interval_ms": 1000,
+  "device_poll_ms": 1000,
+  "theme": "dark",
+  "scrcpy_max_fps": 30,
+  "scrcpy_max_size": 1080,
+  "scrcpy_bit_rate": 8000000,
+  "preview_fps": 1,
+  "auto_refresh_devices": false,
+  "auto_start_preview": true,
+  "preview_auto_close_enabled": true,
+  "preview_auto_close_seconds": 60,
+  "detection_settings_version": 2,
+  "theme_settings_version": 2,
+  "save_dir": "",
+  "snapshot_dir": "",
+  "script_dir": "",
+  "screenshot_dir": ""
+}

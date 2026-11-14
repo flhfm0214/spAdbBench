@@ -1,0 +1,3200 @@
+{
+  "version": 1,
+  "commands": {
+    "pm": {
+      "description": "包管理",
+      "subcommands": [
+        [
+          "help",
+          "显示 pm 帮助"
+        ],
+        [
+          "list",
+          "列出包、权限、特性等"
+        ],
+        [
+          "list packages",
+          "列出包名"
+        ],
+        [
+          "list permission-groups",
+          "列出权限组"
+        ],
+        [
+          "list permissions",
+          "列出权限"
+        ],
+        [
+          "list features",
+          "列出系统特性"
+        ],
+        [
+          "list libraries",
+          "列出共享库"
+        ],
+        [
+          "list users",
+          "列出用户"
+        ],
+        [
+          "path",
+          "显示应用 APK 路径"
+        ],
+        [
+          "install",
+          "安装 APK"
+        ],
+        [
+          "install-existing",
+          "为现有用户安装"
+        ],
+        [
+          "uninstall",
+          "卸载应用"
+        ],
+        [
+          "clear",
+          "清除应用数据"
+        ],
+        [
+          "enable",
+          "启用应用"
+        ],
+        [
+          "disable",
+          "禁用应用"
+        ],
+        [
+          "disable-user",
+          "禁用用户应用"
+        ],
+        [
+          "enable-user",
+          "启用用户应用"
+        ],
+        [
+          "hide",
+          "隐藏应用"
+        ],
+        [
+          "unhide",
+          "取消隐藏应用"
+        ],
+        [
+          "suspend",
+          "暂停应用"
+        ],
+        [
+          "unsuspend",
+          "恢复应用"
+        ],
+        [
+          "grant",
+          "授予运行时权限"
+        ],
+        [
+          "revoke",
+          "撤销运行时权限"
+        ],
+        [
+          "dump",
+          "输出应用信息"
+        ],
+        [
+          "get-app-links",
+          "读取应用链接"
+        ],
+        [
+          "set-app-links",
+          "设置应用链接"
+        ],
+        [
+          "reset-app-links",
+          "重置应用链接"
+        ],
+        [
+          "get-install-location",
+          "读取安装位置"
+        ],
+        [
+          "set-install-location",
+          "设置安装位置"
+        ],
+        [
+          "create-user",
+          "创建用户"
+        ],
+        [
+          "remove-user",
+          "删除用户"
+        ],
+        [
+          "get-max-users",
+          "显示最大用户数"
+        ],
+        [
+          "trim-caches",
+          "清理缓存"
+        ],
+        [
+          "compile",
+          "编译应用"
+        ]
+      ],
+      "options": [
+        [
+          "--user",
+          "指定用户 ID"
+        ],
+        [
+          "-d",
+          "仅显示已禁用包"
+        ],
+        [
+          "-e",
+          "仅显示已启用包"
+        ],
+        [
+          "-s",
+          "仅显示系统包"
+        ],
+        [
+          "-3",
+          "仅显示第三方包"
+        ],
+        [
+          "-f",
+          "显示 APK 路径"
+        ],
+        [
+          "-i",
+          "显示安装来源"
+        ],
+        [
+          "-u",
+          "包含已卸载包"
+        ],
+        [
+          "-r",
+          "替换已存在应用"
+        ]
+      ],
+      "package_arguments": [
+        "install",
+        "install-existing",
+        "uninstall",
+        "clear",
+        "path",
+        "list packages",
+        "enable",
+        "disable",
+        "disable-user",
+        "enable-user",
+        "hide",
+        "unhide",
+        "suspend",
+        "unsuspend",
+        "grant",
+        "revoke",
+        "dump",
+        "get-app-links",
+        "set-app-links",
+        "reset-app-links"
+      ]
+    },
+    "am": {
+      "description": "Activity 与服务管理",
+      "subcommands": [
+        [
+          "start",
+          "启动 Activity"
+        ],
+        [
+          "start-activity",
+          "启动 Activity"
+        ],
+        [
+          "start-service",
+          "启动 Service"
+        ],
+        [
+          "start-foreground-service",
+          "启动前台 Service"
+        ],
+        [
+          "broadcast",
+          "发送广播"
+        ],
+        [
+          "force-stop",
+          "强制停止应用"
+        ],
+        [
+          "kill",
+          "终止应用进程"
+        ],
+        [
+          "kill-all",
+          "终止所有后台进程"
+        ],
+        [
+          "instrument",
+          "运行 instrumentation"
+        ],
+        [
+          "profile",
+          "性能分析"
+        ],
+        [
+          "dumpheap",
+          "导出堆快照"
+        ],
+        [
+          "monitor",
+          "监视应用"
+        ],
+        [
+          "restart",
+          "重启应用"
+        ],
+        [
+          "set-debug-app",
+          "设置调试应用"
+        ],
+        [
+          "clear-debug-app",
+          "清除调试应用"
+        ],
+        [
+          "stack",
+          "任务栈操作"
+        ],
+        [
+          "task",
+          "任务操作"
+        ],
+        [
+          "move-task",
+          "移动任务"
+        ],
+        [
+          "resize-task",
+          "调整任务大小"
+        ],
+        [
+          "split-screen",
+          "分屏"
+        ],
+        [
+          "stack-list",
+          "列出任务栈"
+        ],
+        [
+          "task-list",
+          "列出任务"
+        ]
+      ],
+      "options": [
+        [
+          "-n",
+          "指定组件名"
+        ],
+        [
+          "-a",
+          "指定 Action"
+        ],
+        [
+          "-d",
+          "指定数据 URI"
+        ],
+        [
+          "-t",
+          "指定 MIME 类型"
+        ],
+        [
+          "-c",
+          "指定 Category"
+        ],
+        [
+          "-e",
+          "附加字符串参数"
+        ],
+        [
+          "--es",
+          "附加字符串参数"
+        ],
+        [
+          "--ei",
+          "附加整数参数"
+        ],
+        [
+          "--ez",
+          "附加布尔参数"
+        ],
+        [
+          "--user",
+          "指定用户"
+        ],
+        [
+          "-W",
+          "等待启动完成"
+        ],
+        [
+          "-S",
+          "先停止目标应用"
+        ]
+      ],
+      "package_arguments": [
+        "start",
+        "start-activity",
+        "start-service",
+        "start-foreground-service",
+        "broadcast",
+        "force-stop",
+        "kill",
+        "instrument",
+        "set-debug-app",
+        "start -n",
+        "start-activity -n"
+      ]
+    },
+    "dumpsys": {
+      "description": "读取系统服务状态",
+      "subcommands": [
+        [
+          "-l",
+          "列出可用服务"
+        ],
+        [
+          "--help",
+          "显示帮助"
+        ],
+        [
+          "activity",
+          "Activity 服务"
+        ],
+        [
+          "window",
+          "窗口服务"
+        ],
+        [
+          "package",
+          "包服务"
+        ],
+        [
+          "power",
+          "电源服务"
+        ],
+        [
+          "battery",
+          "电池服务"
+        ],
+        [
+          "display",
+          "显示服务"
+        ],
+        [
+          "input",
+          "输入服务"
+        ],
+        [
+          "meminfo",
+          "内存信息"
+        ],
+        [
+          "cpuinfo",
+          "CPU 信息"
+        ],
+        [
+          "gfxinfo",
+          "图形信息"
+        ],
+        [
+          "surfaceflinger",
+          "SurfaceFlinger"
+        ],
+        [
+          "audio",
+          "音频服务"
+        ],
+        [
+          "media.session",
+          "媒体会话"
+        ],
+        [
+          "wifi",
+          "Wi-Fi 服务"
+        ],
+        [
+          "connectivity",
+          "网络连接"
+        ],
+        [
+          "bluetooth_manager",
+          "蓝牙服务"
+        ],
+        [
+          "notification",
+          "通知服务"
+        ],
+        [
+          "statusbar",
+          "状态栏服务"
+        ],
+        [
+          "clipboard",
+          "剪贴板服务"
+        ],
+        [
+          "settings",
+          "设置服务"
+        ],
+        [
+          "alarm",
+          "闹钟服务"
+        ],
+        [
+          "jobscheduler",
+          "任务调度"
+        ],
+        [
+          "usagestats",
+          "使用统计"
+        ],
+        [
+          "diskstats",
+          "磁盘统计"
+        ],
+        [
+          "thermalservice",
+          "温度服务"
+        ],
+        [
+          "sensorservice",
+          "传感器服务"
+        ]
+      ],
+      "package_arguments": [
+        "package",
+        "meminfo",
+        "gfxinfo",
+        "usagestats"
+      ]
+    },
+    "settings": {
+      "description": "读写系统设置",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "get",
+          "读取设置"
+        ],
+        [
+          "put",
+          "写入设置"
+        ],
+        [
+          "list",
+          "列出设置"
+        ],
+        [
+          "delete",
+          "删除设置"
+        ],
+        [
+          "get-global",
+          "读取 Global 设置"
+        ],
+        [
+          "put-global",
+          "写入 Global 设置"
+        ],
+        [
+          "list-global",
+          "列出 Global 设置"
+        ],
+        [
+          "get-secure",
+          "读取 Secure 设置"
+        ],
+        [
+          "put-secure",
+          "写入 Secure 设置"
+        ],
+        [
+          "list-secure",
+          "列出 Secure 设置"
+        ],
+        [
+          "get-system",
+          "读取 System 设置"
+        ],
+        [
+          "put-system",
+          "写入 System 设置"
+        ],
+        [
+          "list-system",
+          "列出 System 设置"
+        ]
+      ],
+      "value_arguments": {
+        "get": [
+          "global",
+          "secure",
+          "system"
+        ],
+        "put": [
+          "global",
+          "secure",
+          "system"
+        ],
+        "list": [
+          "global",
+          "secure",
+          "system"
+        ],
+        "delete": [
+          "global",
+          "secure",
+          "system"
+        ]
+      }
+    },
+    "svc": {
+      "description": "切换系统开关",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "power",
+          "电源控制"
+        ],
+        [
+          "data",
+          "移动数据"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ],
+        [
+          "bluetooth",
+          "蓝牙"
+        ],
+        [
+          "usb",
+          "USB"
+        ],
+        [
+          "nfc",
+          "NFC"
+        ],
+        [
+          "location",
+          "定位"
+        ],
+        [
+          "statusbar",
+          "状态栏"
+        ],
+        [
+          "cpu",
+          "CPU"
+        ],
+        [
+          "gpu",
+          "GPU"
+        ],
+        [
+          "display",
+          "显示"
+        ]
+      ],
+      "value_arguments": {
+        "power": [
+          "on",
+          "off"
+        ],
+        "data": [
+          "on",
+          "off"
+        ],
+        "wifi": [
+          "on",
+          "off"
+        ],
+        "bluetooth": [
+          "on",
+          "off"
+        ],
+        "usb": [
+          "on",
+          "off"
+        ],
+        "nfc": [
+          "on",
+          "off"
+        ],
+        "location": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "wm": {
+      "description": "修改显示参数",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "size",
+          "设置分辨率"
+        ],
+        [
+          "density",
+          "设置 DPI"
+        ],
+        [
+          "overscan",
+          "设置过扫描"
+        ],
+        [
+          "scaling",
+          "设置缩放"
+        ],
+        [
+          "user-rotation",
+          "设置用户旋转"
+        ],
+        [
+          "fixed-to-user-rotation",
+          "固定用户旋转"
+        ],
+        [
+          "reset",
+          "恢复默认"
+        ]
+      ]
+    },
+    "input": {
+      "description": "注入按键、文本或触控",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "text",
+          "输入文本"
+        ],
+        [
+          "keyevent",
+          "发送按键事件"
+        ],
+        [
+          "tap",
+          "点击坐标"
+        ],
+        [
+          "swipe",
+          "滑动"
+        ],
+        [
+          "draganddrop",
+          "拖放"
+        ],
+        [
+          "press",
+          "按压"
+        ],
+        [
+          "roll",
+          "滚轮"
+        ],
+        [
+          "motionevent",
+          "注入触摸事件"
+        ],
+        [
+          "keycombination",
+          "组合按键"
+        ]
+      ]
+    },
+    "cmd": {
+      "description": "调用系统命令服务",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "activity",
+          "Activity 服务"
+        ],
+        [
+          "package",
+          "包服务"
+        ],
+        [
+          "window",
+          "窗口服务"
+        ],
+        [
+          "input",
+          "输入服务"
+        ],
+        [
+          "settings",
+          "设置服务"
+        ],
+        [
+          "wifi",
+          "Wi-Fi 服务"
+        ],
+        [
+          "connectivity",
+          "网络连接"
+        ],
+        [
+          "media",
+          "媒体服务"
+        ],
+        [
+          "audio",
+          "音频服务"
+        ],
+        [
+          "display",
+          "显示服务"
+        ],
+        [
+          "power",
+          "电源服务"
+        ],
+        [
+          "battery",
+          "电池服务"
+        ],
+        [
+          "notification",
+          "通知服务"
+        ],
+        [
+          "statusbar",
+          "状态栏服务"
+        ],
+        [
+          "clipboard",
+          "剪贴板服务"
+        ],
+        [
+          "alarm",
+          "闹钟服务"
+        ],
+        [
+          "jobscheduler",
+          "任务调度"
+        ],
+        [
+          "usagestats",
+          "使用统计"
+        ],
+        [
+          "netstats",
+          "网络统计"
+        ],
+        [
+          "deviceidle",
+          "Doze 状态"
+        ],
+        [
+          "appops",
+          "应用权限"
+        ],
+        [
+          "sensorservice",
+          "传感器服务"
+        ],
+        [
+          "thermalservice",
+          "温度服务"
+        ],
+        [
+          "bluetooth_manager",
+          "蓝牙服务"
+        ],
+        [
+          "overlay",
+          "Overlay 服务"
+        ],
+        [
+          "uimode",
+          "UI 模式"
+        ],
+        [
+          "shortcut",
+          "快捷方式"
+        ],
+        [
+          "role",
+          "角色管理"
+        ],
+        [
+          "autofill",
+          "自动填充"
+        ],
+        [
+          "mount",
+          "挂载服务"
+        ],
+        [
+          "storaged",
+          "存储服务"
+        ],
+        [
+          "vibrator",
+          "振动服务"
+        ]
+      ],
+      "package_arguments": [
+        "package install",
+        "package uninstall",
+        "package list packages",
+        "package clear",
+        "package path",
+        "package enable",
+        "package disable-user",
+        "package force-stop",
+        "activity start-activity",
+        "activity force-stop"
+      ]
+    },
+    "monkey": {
+      "description": "向应用发送随机事件",
+      "subcommands": [
+        [
+          "-p",
+          "指定包名"
+        ],
+        [
+          "-v",
+          "详细输出"
+        ],
+        [
+          "-s",
+          "随机种子"
+        ],
+        [
+          "-c",
+          "指定 Category"
+        ],
+        [
+          "--throttle",
+          "事件间隔毫秒"
+        ],
+        [
+          "--pct-touch",
+          "触摸事件百分比"
+        ],
+        [
+          "--pct-motion",
+          "移动事件百分比"
+        ],
+        [
+          "--pct-nav",
+          "导航事件百分比"
+        ],
+        [
+          "--pct-majornav",
+          "主导航事件百分比"
+        ],
+        [
+          "--pct-syskeys",
+          "系统按键百分比"
+        ],
+        [
+          "--pct-appswitch",
+          "应用切换百分比"
+        ],
+        [
+          "--pct-anyevent",
+          "任意事件百分比"
+        ],
+        [
+          "--ignore-crashes",
+          "忽略崩溃"
+        ],
+        [
+          "--ignore-timeouts",
+          "忽略超时"
+        ],
+        [
+          "--monitor-native-crashes",
+          "监视原生崩溃"
+        ],
+        [
+          "--kill-process-after-error",
+          "出错后结束进程"
+        ]
+      ],
+      "package_arguments": [
+        "-p"
+      ]
+    },
+    "screencap": {
+      "description": "截取设备屏幕",
+      "subcommands": [
+        [
+          "-p",
+          "PNG 格式"
+        ],
+        [
+          "-h",
+          "显示帮助"
+        ],
+        [
+          "-d",
+          "指定显示 ID"
+        ],
+        [
+          "-t",
+          "指定时间戳"
+        ],
+        [
+          "-a",
+          "包含 Alpha 通道"
+        ]
+      ]
+    },
+    "screenrecord": {
+      "description": "录制设备屏幕",
+      "subcommands": [
+        [
+          "--size",
+          "录制分辨率"
+        ],
+        [
+          "--bit-rate",
+          "码率"
+        ],
+        [
+          "--time-limit",
+          "时长限制"
+        ],
+        [
+          "--rotate",
+          "旋转画面"
+        ],
+        [
+          "--verbose",
+          "详细输出"
+        ],
+        [
+          "--bugreport",
+          "附加信息"
+        ],
+        [
+          "--display-id",
+          "指定显示 ID"
+        ],
+        [
+          "--output-format",
+          "输出格式"
+        ]
+      ]
+    },
+    "content": {
+      "description": "访问内容提供器",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "query",
+          "查询"
+        ],
+        [
+          "insert",
+          "插入"
+        ],
+        [
+          "update",
+          "更新"
+        ],
+        [
+          "delete",
+          "删除"
+        ],
+        [
+          "call",
+          "调用方法"
+        ],
+        [
+          "read",
+          "读取文件"
+        ],
+        [
+          "write",
+          "写入文件"
+        ],
+        [
+          "gettype",
+          "读取 MIME 类型"
+        ]
+      ]
+    },
+    "appops": {
+      "description": "管理应用权限",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "get",
+          "读取权限模式"
+        ],
+        [
+          "set",
+          "设置权限模式"
+        ],
+        [
+          "reset",
+          "重置权限"
+        ],
+        [
+          "reset-all",
+          "重置所有权限"
+        ]
+      ],
+      "package_arguments": [
+        "get",
+        "set",
+        "reset"
+      ]
+    },
+    "deviceidle": {
+      "description": "控制 Doze 状态",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "force-idle",
+          "强制进入 Doze"
+        ],
+        [
+          "unforce",
+          "退出 Doze"
+        ],
+        [
+          "disable",
+          "禁用 Doze"
+        ],
+        [
+          "enable",
+          "启用 Doze"
+        ],
+        [
+          "whitelist",
+          "白名单管理"
+        ],
+        [
+          "except-idle",
+          "临时例外"
+        ],
+        [
+          "get",
+          "读取状态"
+        ],
+        [
+          "step",
+          "推进状态"
+        ]
+      ]
+    },
+    "top": {
+      "description": "查看进程资源占用",
+      "subcommands": [
+        [
+          "-n",
+          "刷新次数"
+        ],
+        [
+          "-d",
+          "刷新间隔"
+        ],
+        [
+          "-m",
+          "显示进程数"
+        ],
+        [
+          "-s",
+          "排序列"
+        ],
+        [
+          "-H",
+          "显示线程"
+        ],
+        [
+          "-p",
+          "指定进程"
+        ],
+        [
+          "-t",
+          "显示线程"
+        ],
+        [
+          "-h",
+          "显示帮助"
+        ]
+      ]
+    },
+    "ps": {
+      "description": "列出进程",
+      "subcommands": [
+        [
+          "-A",
+          "所有进程"
+        ],
+        [
+          "-a",
+          "所有用户进程"
+        ],
+        [
+          "-d",
+          "已停止进程"
+        ],
+        [
+          "-e",
+          "所有进程"
+        ],
+        [
+          "-f",
+          "完整格式"
+        ],
+        [
+          "-l",
+          "长格式"
+        ],
+        [
+          "-o",
+          "指定字段"
+        ],
+        [
+          "-p",
+          "指定 PID"
+        ],
+        [
+          "-u",
+          "指定用户"
+        ],
+        [
+          "-x",
+          "无终端进程"
+        ]
+      ]
+    },
+    "kill": {
+      "description": "终止进程",
+      "subcommands": [
+        [
+          "-9",
+          "SIGKILL"
+        ],
+        [
+          "-15",
+          "SIGTERM"
+        ],
+        [
+          "-SIGKILL",
+          "强制终止"
+        ],
+        [
+          "-SIGTERM",
+          "正常终止"
+        ],
+        [
+          "-l",
+          "列出信号"
+        ]
+      ]
+    },
+    "ls": {
+      "description": "列出目录",
+      "subcommands": [
+        [
+          "-l",
+          "长格式"
+        ],
+        [
+          "-a",
+          "包含隐藏文件"
+        ],
+        [
+          "-h",
+          "人类可读大小"
+        ],
+        [
+          "-R",
+          "递归"
+        ],
+        [
+          "-d",
+          "目录本身"
+        ],
+        [
+          "-t",
+          "按时间排序"
+        ],
+        [
+          "-r",
+          "反向排序"
+        ],
+        [
+          "-S",
+          "按大小排序"
+        ],
+        [
+          "-i",
+          "显示 inode"
+        ],
+        [
+          "-n",
+          "数字 UID/GID"
+        ],
+        [
+          "-p",
+          "目录加斜杠"
+        ],
+        [
+          "-F",
+          "附加类型标记"
+        ]
+      ]
+    },
+    "cat": {
+      "description": "输出文件内容",
+      "subcommands": [
+        [
+          "-n",
+          "显示行号"
+        ],
+        [
+          "-b",
+          "非空行编号"
+        ],
+        [
+          "-s",
+          "压缩空行"
+        ],
+        [
+          "-v",
+          "显示不可见字符"
+        ],
+        [
+          "-E",
+          "行尾显示 $"
+        ],
+        [
+          "-T",
+          "Tab 显示为 ^I"
+        ]
+      ]
+    },
+    "df": {
+      "description": "查看磁盘空间",
+      "subcommands": [
+        [
+          "-h",
+          "人类可读"
+        ],
+        [
+          "-k",
+          "KB"
+        ],
+        [
+          "-m",
+          "MB"
+        ],
+        [
+          "-i",
+          "inode"
+        ],
+        [
+          "-a",
+          "所有文件系统"
+        ],
+        [
+          "-T",
+          "显示文件系统类型"
+        ]
+      ]
+    },
+    "du": {
+      "description": "统计目录占用",
+      "subcommands": [
+        [
+          "-h",
+          "人类可读"
+        ],
+        [
+          "-s",
+          "汇总"
+        ],
+        [
+          "-a",
+          "包含文件"
+        ],
+        [
+          "-k",
+          "KB"
+        ],
+        [
+          "-m",
+          "MB"
+        ],
+        [
+          "-c",
+          "总计"
+        ],
+        [
+          "-d",
+          "深度"
+        ]
+      ]
+    },
+    "find": {
+      "description": "查找文件",
+      "subcommands": [
+        [
+          "-name",
+          "按名称匹配"
+        ],
+        [
+          "-iname",
+          "忽略大小写匹配"
+        ],
+        [
+          "-type",
+          "按类型匹配"
+        ],
+        [
+          "-maxdepth",
+          "最大深度"
+        ],
+        [
+          "-mindepth",
+          "最小深度"
+        ],
+        [
+          "-size",
+          "按大小匹配"
+        ],
+        [
+          "-mtime",
+          "按修改时间匹配"
+        ],
+        [
+          "-exec",
+          "执行命令"
+        ],
+        [
+          "-print",
+          "输出路径"
+        ],
+        [
+          "-delete",
+          "删除匹配项"
+        ]
+      ]
+    },
+    "grep": {
+      "description": "文本过滤",
+      "subcommands": [
+        [
+          "-i",
+          "忽略大小写"
+        ],
+        [
+          "-v",
+          "反向匹配"
+        ],
+        [
+          "-n",
+          "显示行号"
+        ],
+        [
+          "-r",
+          "递归"
+        ],
+        [
+          "-E",
+          "扩展正则"
+        ],
+        [
+          "-F",
+          "固定字符串"
+        ],
+        [
+          "-w",
+          "全词匹配"
+        ],
+        [
+          "-c",
+          "只输出计数"
+        ],
+        [
+          "-l",
+          "只输出文件名"
+        ]
+      ]
+    },
+    "reboot": {
+      "description": "重启设备",
+      "subcommands": [
+        [
+          "bootloader",
+          "重启到 Bootloader"
+        ],
+        [
+          "recovery",
+          "重启到 Recovery"
+        ],
+        [
+          "fastboot",
+          "重启到 Fastboot"
+        ],
+        [
+          "sideload",
+          "重启到 Sideload"
+        ],
+        [
+          "edl",
+          "重启到 EDL"
+        ],
+        [
+          "download",
+          "重启到下载模式"
+        ],
+        [
+          "userspace",
+          "重启用户空间"
+        ],
+        [
+          "-p",
+          "关机"
+        ]
+      ]
+    },
+    "logcat": {
+      "description": "读取设备日志",
+      "subcommands": [
+        [
+          "-c",
+          "清空日志"
+        ],
+        [
+          "-d",
+          "输出后退出"
+        ],
+        [
+          "-f",
+          "写入文件"
+        ],
+        [
+          "-g",
+          "显示缓冲区信息"
+        ],
+        [
+          "-n",
+          "轮转数量"
+        ],
+        [
+          "-r",
+          "轮转大小"
+        ],
+        [
+          "-s",
+          "静默标签"
+        ],
+        [
+          "-v",
+          "日志格式"
+        ],
+        [
+          "-t",
+          "最近条数"
+        ],
+        [
+          "-b",
+          "指定缓冲区"
+        ],
+        [
+          "--pid",
+          "指定 PID"
+        ],
+        [
+          "--regex",
+          "正则过滤"
+        ]
+      ]
+    },
+    "ping": {
+      "description": "测试网络连通性",
+      "subcommands": [
+        [
+          "-c",
+          "发送次数"
+        ],
+        [
+          "-i",
+          "间隔秒数"
+        ],
+        [
+          "-s",
+          "包大小"
+        ],
+        [
+          "-W",
+          "超时时间"
+        ],
+        [
+          "-w",
+          "总超时"
+        ],
+        [
+          "-4",
+          "IPv4"
+        ],
+        [
+          "-6",
+          "IPv6"
+        ]
+      ]
+    },
+    "ip": {
+      "description": "查看或配置 IP",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "addr",
+          "地址管理"
+        ],
+        [
+          "route",
+          "路由管理"
+        ],
+        [
+          "link",
+          "链路管理"
+        ],
+        [
+          "rule",
+          "规则管理"
+        ],
+        [
+          "neigh",
+          "邻居表"
+        ],
+        [
+          "tunnel",
+          "隧道"
+        ],
+        [
+          "maddress",
+          "组播地址"
+        ],
+        [
+          "netns",
+          "网络命名空间"
+        ]
+      ]
+    },
+    "ifconfig": {
+      "description": "查看或配置网络接口",
+      "subcommands": [
+        [
+          "up",
+          "启用接口"
+        ],
+        [
+          "down",
+          "禁用接口"
+        ],
+        [
+          "netmask",
+          "设置掩码"
+        ],
+        [
+          "broadcast",
+          "设置广播地址"
+        ],
+        [
+          "mtu",
+          "设置 MTU"
+        ],
+        [
+          "hw",
+          "设置硬件地址"
+        ]
+      ]
+    },
+    "service": {
+      "description": "调用系统服务",
+      "subcommands": [
+        [
+          "help",
+          "显示帮助"
+        ],
+        [
+          "list",
+          "列出服务"
+        ],
+        [
+          "call",
+          "调用服务方法"
+        ]
+      ]
+    },
+    "install": {
+      "description": "安装 APK",
+      "subcommands": [
+        [
+          "-r",
+          "替换已存在应用"
+        ],
+        [
+          "-d",
+          "允许降级安装"
+        ],
+        [
+          "-g",
+          "授予所有运行时权限"
+        ],
+        [
+          "-t",
+          "允许测试包"
+        ],
+        [
+          "-s",
+          "安装到 SD 卡"
+        ],
+        [
+          "--user",
+          "指定用户"
+        ],
+        [
+          "--abi",
+          "指定 ABI"
+        ],
+        [
+          "--instant",
+          "即时应用"
+        ],
+        [
+          "--no-streaming",
+          "不使用流式安装"
+        ]
+      ]
+    },
+    "uninstall": {
+      "description": "卸载应用",
+      "subcommands": [
+        [
+          "-k",
+          "保留数据"
+        ],
+        [
+          "--user",
+          "指定用户"
+        ],
+        [
+          "--versionCode",
+          "指定版本"
+        ]
+      ]
+    },
+    "forward": {
+      "description": "建立端口转发",
+      "subcommands": [
+        [
+          "--no-rebind",
+          "不重新绑定"
+        ],
+        [
+          "tcp:",
+          "TCP 端口"
+        ],
+        [
+          "udp:",
+          "UDP 端口"
+        ],
+        [
+          "localabstract:",
+          "抽象本地套接字"
+        ],
+        [
+          "localreserved:",
+          "保留本地套接字"
+        ],
+        [
+          "localfilesystem:",
+          "本地文件系统套接字"
+        ]
+      ]
+    },
+    "reverse": {
+      "description": "建立反向端口转发",
+      "subcommands": [
+        [
+          "--no-rebind",
+          "不重新绑定"
+        ],
+        [
+          "tcp:",
+          "TCP 端口"
+        ],
+        [
+          "udp:",
+          "UDP 端口"
+        ],
+        [
+          "localabstract:",
+          "抽象本地套接字"
+        ]
+      ]
+    },
+    "reconnect": {
+      "description": "重连设备",
+      "subcommands": [
+        [
+          "device",
+          "重连在线设备"
+        ],
+        [
+          "offline",
+          "重连离线设备"
+        ]
+      ]
+    },
+    "sed": {
+      "description": "流式文本编辑",
+      "subcommands": [
+        [
+          "-n",
+          "不自动输出模式空间"
+        ],
+        [
+          "-e",
+          "追加编辑脚本"
+        ],
+        [
+          "-i",
+          "原地修改文件"
+        ],
+        [
+          "-E",
+          "扩展正则"
+        ],
+        [
+          "-r",
+          "扩展正则"
+        ],
+        [
+          "-s",
+          "分别处理每个文件"
+        ]
+      ]
+    },
+    "awk": {
+      "description": "按字段处理文本",
+      "subcommands": [
+        [
+          "-F",
+          "指定字段分隔符"
+        ],
+        [
+          "-v",
+          "定义变量"
+        ],
+        [
+          "-f",
+          "从文件读取程序"
+        ],
+        [
+          "-W",
+          "兼容性选项"
+        ]
+      ]
+    },
+    "cut": {
+      "description": "按字段或字符截取文本",
+      "subcommands": [
+        [
+          "-d",
+          "字段分隔符"
+        ],
+        [
+          "-f",
+          "字段列表"
+        ],
+        [
+          "-c",
+          "字符列表"
+        ],
+        [
+          "-b",
+          "字节列表"
+        ],
+        [
+          "-s",
+          "跳过无分隔符行"
+        ],
+        [
+          "--complement",
+          "输出补集"
+        ]
+      ]
+    },
+    "sort": {
+      "description": "对文本行排序",
+      "subcommands": [
+        [
+          "-r",
+          "逆序"
+        ],
+        [
+          "-n",
+          "数值排序"
+        ],
+        [
+          "-u",
+          "去除重复行"
+        ],
+        [
+          "-k",
+          "指定排序字段"
+        ],
+        [
+          "-t",
+          "指定字段分隔符"
+        ],
+        [
+          "-f",
+          "忽略大小写"
+        ],
+        [
+          "-h",
+          "人类可读数值"
+        ],
+        [
+          "-V",
+          "版本号排序"
+        ],
+        [
+          "-o",
+          "输出到文件"
+        ]
+      ]
+    },
+    "uniq": {
+      "description": "去除相邻重复行",
+      "subcommands": [
+        [
+          "-c",
+          "显示重复次数"
+        ],
+        [
+          "-d",
+          "只显示重复行"
+        ],
+        [
+          "-u",
+          "只显示唯一行"
+        ],
+        [
+          "-i",
+          "忽略大小写"
+        ],
+        [
+          "-f",
+          "跳过字段"
+        ],
+        [
+          "-s",
+          "跳过字符"
+        ],
+        [
+          "-w",
+          "比较字符数"
+        ]
+      ]
+    },
+    "tr": {
+      "description": "转换或删除字符",
+      "subcommands": [
+        [
+          "-d",
+          "删除字符"
+        ],
+        [
+          "-s",
+          "压缩重复字符"
+        ],
+        [
+          "-c",
+          "取字符补集"
+        ],
+        [
+          "-t",
+          "截断集合1"
+        ]
+      ]
+    },
+    "tee": {
+      "description": "同时写入文件和标准输出",
+      "subcommands": [
+        [
+          "-a",
+          "追加写入"
+        ],
+        [
+          "-i",
+          "忽略中断信号"
+        ]
+      ]
+    },
+    "head": {
+      "description": "输出文件开头部分",
+      "subcommands": [
+        [
+          "-n",
+          "输出行数"
+        ],
+        [
+          "-c",
+          "输出字节数"
+        ],
+        [
+          "-q",
+          "不显示文件名"
+        ],
+        [
+          "-v",
+          "显示文件名"
+        ]
+      ]
+    },
+    "tail": {
+      "description": "输出文件末尾部分",
+      "subcommands": [
+        [
+          "-n",
+          "输出行数"
+        ],
+        [
+          "-c",
+          "输出字节数"
+        ],
+        [
+          "-f",
+          "持续跟踪文件"
+        ],
+        [
+          "-F",
+          "跟踪并重试"
+        ],
+        [
+          "-q",
+          "不显示文件名"
+        ],
+        [
+          "-v",
+          "显示文件名"
+        ]
+      ]
+    },
+    "wc": {
+      "description": "统计行数、单词数和字节数",
+      "subcommands": [
+        [
+          "-l",
+          "行数"
+        ],
+        [
+          "-w",
+          "单词数"
+        ],
+        [
+          "-c",
+          "字节数"
+        ],
+        [
+          "-m",
+          "字符数"
+        ],
+        [
+          "-L",
+          "最长行长度"
+        ]
+      ]
+    },
+    "nl": {
+      "description": "为文本添加行号",
+      "subcommands": [
+        [
+          "-b",
+          "编号方式"
+        ],
+        [
+          "-n",
+          "编号格式"
+        ],
+        [
+          "-s",
+          "行号分隔符"
+        ],
+        [
+          "-w",
+          "行号宽度"
+        ],
+        [
+          "-v",
+          "起始编号"
+        ]
+      ]
+    },
+    "tac": {
+      "description": "按行反向输出文件",
+      "subcommands": []
+    },
+    "rev": {
+      "description": "反转每一行的字符",
+      "subcommands": []
+    },
+    "paste": {
+      "description": "按列合并文件内容",
+      "subcommands": [
+        [
+          "-d",
+          "列分隔符"
+        ],
+        [
+          "-s",
+          "串行合并"
+        ]
+      ]
+    },
+    "join": {
+      "description": "按字段连接两个文件",
+      "subcommands": [
+        [
+          "-1",
+          "文件1 的连接字段"
+        ],
+        [
+          "-2",
+          "文件2 的连接字段"
+        ],
+        [
+          "-j",
+          "两侧相同的连接字段"
+        ],
+        [
+          "-t",
+          "字段分隔符"
+        ],
+        [
+          "-a",
+          "输出未匹配行"
+        ],
+        [
+          "-v",
+          "只输出未匹配行"
+        ],
+        [
+          "-o",
+          "指定输出字段"
+        ]
+      ]
+    },
+    "comm": {
+      "description": "比较两个已排序文件",
+      "subcommands": [
+        [
+          "-1",
+          "隐藏文件1 独有列"
+        ],
+        [
+          "-2",
+          "隐藏文件2 独有列"
+        ],
+        [
+          "-3",
+          "隐藏共同列"
+        ],
+        [
+          "--check-order",
+          "检查排序"
+        ],
+        [
+          "--nocheck-order",
+          "不检查排序"
+        ]
+      ]
+    },
+    "od": {
+      "description": "以八进制或其他格式转储数据",
+      "subcommands": [
+        [
+          "-A",
+          "地址进制"
+        ],
+        [
+          "-t",
+          "输出类型"
+        ],
+        [
+          "-N",
+          "读取字节数"
+        ],
+        [
+          "-j",
+          "跳过字节数"
+        ],
+        [
+          "-v",
+          "不省略重复行"
+        ],
+        [
+          "-c",
+          "按字符显示"
+        ]
+      ]
+    },
+    "hexdump": {
+      "description": "十六进制转储",
+      "subcommands": [
+        [
+          "-C",
+          "规范十六进制格式"
+        ],
+        [
+          "-c",
+          "按字符显示"
+        ],
+        [
+          "-n",
+          "读取字节数"
+        ],
+        [
+          "-s",
+          "跳过字节数"
+        ],
+        [
+          "-v",
+          "不省略重复行"
+        ]
+      ]
+    },
+    "strings": {
+      "description": "提取文件中的可打印字符串",
+      "subcommands": [
+        [
+          "-a",
+          "扫描整个文件"
+        ],
+        [
+          "-n",
+          "最小字符串长度"
+        ],
+        [
+          "-t",
+          "显示偏移"
+        ],
+        [
+          "-e",
+          "指定字符编码"
+        ]
+      ]
+    },
+    "base64": {
+      "description": "Base64 编码或解码",
+      "subcommands": [
+        [
+          "-d",
+          "解码"
+        ],
+        [
+          "-w",
+          "换行宽度"
+        ]
+      ]
+    },
+    "md5sum": {
+      "description": "计算或校验 MD5",
+      "subcommands": [
+        [
+          "-b",
+          "二进制模式"
+        ],
+        [
+          "-c",
+          "校验文件"
+        ],
+        [
+          "-t",
+          "文本模式"
+        ]
+      ]
+    },
+    "sha1sum": {
+      "description": "计算或校验 SHA-1",
+      "subcommands": [
+        [
+          "-b",
+          "二进制模式"
+        ],
+        [
+          "-c",
+          "校验文件"
+        ],
+        [
+          "-t",
+          "文本模式"
+        ]
+      ]
+    },
+    "sha256sum": {
+      "description": "计算或校验 SHA-256",
+      "subcommands": [
+        [
+          "-b",
+          "二进制模式"
+        ],
+        [
+          "-c",
+          "校验文件"
+        ],
+        [
+          "-t",
+          "文本模式"
+        ]
+      ]
+    },
+    "sha512sum": {
+      "description": "计算或校验 SHA-512",
+      "subcommands": [
+        [
+          "-b",
+          "二进制模式"
+        ],
+        [
+          "-c",
+          "校验文件"
+        ],
+        [
+          "-t",
+          "文本模式"
+        ]
+      ]
+    },
+    "cksum": {
+      "description": "计算 CRC 校验和",
+      "subcommands": [
+        [
+          "--algorithm",
+          "指定算法"
+        ],
+        [
+          "--untagged",
+          "仅输出校验值"
+        ]
+      ]
+    },
+    "sum": {
+      "description": "计算 BSD 或 System V 校验和",
+      "subcommands": [
+        [
+          "-s",
+          "System V 算法"
+        ],
+        [
+          "-r",
+          "BSD 算法"
+        ]
+      ]
+    },
+    "fold": {
+      "description": "按指定宽度折行",
+      "subcommands": [
+        [
+          "-w",
+          "行宽"
+        ],
+        [
+          "-s",
+          "在空格处折行"
+        ],
+        [
+          "-b",
+          "按字节计数"
+        ]
+      ]
+    },
+    "fmt": {
+      "description": "重新格式化文本段落",
+      "subcommands": [
+        [
+          "-w",
+          "行宽"
+        ],
+        [
+          "-s",
+          "只拆分长行"
+        ],
+        [
+          "-u",
+          "统一空格"
+        ]
+      ]
+    },
+    "pr": {
+      "description": "分页格式化文本",
+      "subcommands": [
+        [
+          "-t",
+          "省略页眉页脚"
+        ],
+        [
+          "-n",
+          "显示行号"
+        ],
+        [
+          "-w",
+          "页面宽度"
+        ],
+        [
+          "-h",
+          "页眉标题"
+        ]
+      ]
+    },
+    "column": {
+      "description": "将文本格式化为列",
+      "subcommands": [
+        [
+          "-t",
+          "自动对齐表格"
+        ],
+        [
+          "-s",
+          "字段分隔符"
+        ],
+        [
+          "-c",
+          "输出宽度"
+        ],
+        [
+          "-x",
+          "先填满行"
+        ]
+      ]
+    },
+    "expand": {
+      "description": "把 Tab 转换为空格",
+      "subcommands": [
+        [
+          "-t",
+          "Tab 宽度"
+        ],
+        [
+          "-i",
+          "只转换行首 Tab"
+        ]
+      ]
+    },
+    "unexpand": {
+      "description": "把空格转换为 Tab",
+      "subcommands": [
+        [
+          "-a",
+          "转换所有空格"
+        ],
+        [
+          "-t",
+          "Tab 宽度"
+        ]
+      ]
+    },
+    "split": {
+      "description": "拆分文件",
+      "subcommands": [
+        [
+          "-b",
+          "按字节大小拆分"
+        ],
+        [
+          "-l",
+          "按行数拆分"
+        ],
+        [
+          "-n",
+          "拆分为指定块数"
+        ],
+        [
+          "-d",
+          "使用数字后缀"
+        ],
+        [
+          "-a",
+          "后缀长度"
+        ]
+      ]
+    },
+    "csplit": {
+      "description": "按模式拆分文件",
+      "subcommands": [
+        [
+          "-f",
+          "输出前缀"
+        ],
+        [
+          "-b",
+          "后缀格式"
+        ],
+        [
+          "-n",
+          "后缀位数"
+        ],
+        [
+          "-k",
+          "保留输出文件"
+        ]
+      ]
+    },
+    "shuf": {
+      "description": "随机排列输入行",
+      "subcommands": [
+        [
+          "-n",
+          "输出行数"
+        ],
+        [
+          "-e",
+          "把参数作为输入行"
+        ],
+        [
+          "-i",
+          "使用数字范围"
+        ],
+        [
+          "-r",
+          "允许重复"
+        ],
+        [
+          "-z",
+          "NUL 分隔"
+        ]
+      ]
+    },
+    "tsort": {
+      "description": "拓扑排序",
+      "subcommands": []
+    },
+    "diff": {
+      "description": "比较文件差异",
+      "subcommands": [
+        [
+          "-u",
+          "统一格式"
+        ],
+        [
+          "-c",
+          "上下文格式"
+        ],
+        [
+          "-r",
+          "递归比较目录"
+        ],
+        [
+          "-i",
+          "忽略大小写"
+        ],
+        [
+          "-w",
+          "忽略空白"
+        ],
+        [
+          "-q",
+          "只报告是否不同"
+        ],
+        [
+          "-N",
+          "把缺失文件视为空"
+        ]
+      ]
+    },
+    "cmp": {
+      "description": "逐字节比较文件",
+      "subcommands": [
+        [
+          "-l",
+          "列出所有差异"
+        ],
+        [
+          "-s",
+          "静默模式"
+        ],
+        [
+          "-b",
+          "显示不同字节"
+        ]
+      ]
+    },
+    "patch": {
+      "description": "应用补丁",
+      "subcommands": [
+        [
+          "-p",
+          "剥离路径层级"
+        ],
+        [
+          "-R",
+          "反向应用"
+        ],
+        [
+          "-i",
+          "补丁文件"
+        ],
+        [
+          "-N",
+          "跳过已应用补丁"
+        ],
+        [
+          "-b",
+          "备份原文件"
+        ]
+      ]
+    },
+    "zcat": {
+      "description": "查看 gzip 压缩文件",
+      "subcommands": [
+        [
+          "-f",
+          "强制读取"
+        ]
+      ]
+    },
+    "bzcat": {
+      "description": "查看 bzip2 压缩文件",
+      "subcommands": [
+        [
+          "-f",
+          "强制读取"
+        ]
+      ]
+    },
+    "xzcat": {
+      "description": "查看 xz 压缩文件",
+      "subcommands": [
+        [
+          "-f",
+          "强制读取"
+        ]
+      ]
+    },
+    "gzip": {
+      "description": "gzip 压缩或解压",
+      "subcommands": [
+        [
+          "-d",
+          "解压"
+        ],
+        [
+          "-k",
+          "保留原文件"
+        ],
+        [
+          "-c",
+          "输出到标准输出"
+        ],
+        [
+          "-f",
+          "强制覆盖"
+        ],
+        [
+          "-r",
+          "递归处理"
+        ],
+        [
+          "-9",
+          "最大压缩"
+        ]
+      ]
+    },
+    "gunzip": {
+      "description": "解压 gzip 文件",
+      "subcommands": [
+        [
+          "-k",
+          "保留原文件"
+        ],
+        [
+          "-c",
+          "输出到标准输出"
+        ],
+        [
+          "-f",
+          "强制解压"
+        ],
+        [
+          "-r",
+          "递归处理"
+        ]
+      ]
+    },
+    "bzip2": {
+      "description": "bzip2 压缩或解压",
+      "subcommands": [
+        [
+          "-d",
+          "解压"
+        ],
+        [
+          "-k",
+          "保留原文件"
+        ],
+        [
+          "-c",
+          "输出到标准输出"
+        ],
+        [
+          "-f",
+          "强制覆盖"
+        ],
+        [
+          "-9",
+          "最大压缩"
+        ]
+      ]
+    },
+    "bunzip2": {
+      "description": "解压 bzip2 文件",
+      "subcommands": [
+        [
+          "-k",
+          "保留原文件"
+        ],
+        [
+          "-c",
+          "输出到标准输出"
+        ],
+        [
+          "-f",
+          "强制解压"
+        ]
+      ]
+    },
+    "xz": {
+      "description": "xz 压缩或解压",
+      "subcommands": [
+        [
+          "-d",
+          "解压"
+        ],
+        [
+          "-k",
+          "保留原文件"
+        ],
+        [
+          "-c",
+          "输出到标准输出"
+        ],
+        [
+          "-f",
+          "强制覆盖"
+        ],
+        [
+          "-9",
+          "最大压缩"
+        ],
+        [
+          "-T",
+          "线程数"
+        ]
+      ]
+    },
+    "unxz": {
+      "description": "解压 xz 文件",
+      "subcommands": [
+        [
+          "-k",
+          "保留原文件"
+        ],
+        [
+          "-c",
+          "输出到标准输出"
+        ],
+        [
+          "-f",
+          "强制解压"
+        ]
+      ]
+    },
+    "zip": {
+      "description": "创建 zip 压缩包",
+      "subcommands": [
+        [
+          "-r",
+          "递归目录"
+        ],
+        [
+          "-q",
+          "静默"
+        ],
+        [
+          "-9",
+          "最大压缩"
+        ],
+        [
+          "-e",
+          "加密"
+        ],
+        [
+          "-d",
+          "从压缩包删除"
+        ]
+      ]
+    },
+    "unzip": {
+      "description": "解压 zip 压缩包",
+      "subcommands": [
+        [
+          "-l",
+          "列出内容"
+        ],
+        [
+          "-o",
+          "覆盖已有文件"
+        ],
+        [
+          "-q",
+          "静默"
+        ],
+        [
+          "-d",
+          "解压目录"
+        ],
+        [
+          "-p",
+          "输出到标准输出"
+        ],
+        [
+          "-t",
+          "测试压缩包"
+        ]
+      ]
+    },
+    "tar": {
+      "description": "创建或解包 tar 归档",
+      "subcommands": [
+        [
+          "-c",
+          "创建归档"
+        ],
+        [
+          "-x",
+          "解包归档"
+        ],
+        [
+          "-t",
+          "列出归档内容"
+        ],
+        [
+          "-z",
+          "gzip 压缩"
+        ],
+        [
+          "-j",
+          "bzip2 压缩"
+        ],
+        [
+          "-J",
+          "xz 压缩"
+        ],
+        [
+          "-f",
+          "指定归档文件"
+        ],
+        [
+          "-v",
+          "显示处理过程"
+        ],
+        [
+          "-C",
+          "切换目录"
+        ]
+      ]
+    },
+    "less": {
+      "description": "分页查看文本",
+      "subcommands": [
+        [
+          "-N",
+          "显示行号"
+        ],
+        [
+          "-S",
+          "长行不折行"
+        ],
+        [
+          "-R",
+          "显示颜色"
+        ],
+        [
+          "-i",
+          "搜索忽略大小写"
+        ],
+        [
+          "-F",
+          "内容短时直接退出"
+        ],
+        [
+          "-X",
+          "退出时不清屏"
+        ]
+      ]
+    },
+    "more": {
+      "description": "分页查看文本",
+      "subcommands": [
+        [
+          "-d",
+          "显示提示"
+        ],
+        [
+          "-s",
+          "压缩空行"
+        ],
+        [
+          "-n",
+          "每屏行数"
+        ]
+      ]
+    },
+    "basename": {
+      "description": "取路径的文件名部分",
+      "subcommands": [
+        [
+          "-a",
+          "处理多个路径"
+        ],
+        [
+          "-s",
+          "去除后缀"
+        ],
+        [
+          "-z",
+          "NUL 分隔"
+        ]
+      ]
+    },
+    "dirname": {
+      "description": "取路径的目录部分",
+      "subcommands": [
+        [
+          "-z",
+          "NUL 分隔"
+        ]
+      ]
+    },
+    "readlink": {
+      "description": "读取符号链接目标",
+      "subcommands": [
+        [
+          "-f",
+          "递归解析"
+        ],
+        [
+          "-e",
+          "目标必须存在"
+        ],
+        [
+          "-m",
+          "允许缺失"
+        ],
+        [
+          "-n",
+          "不输出换行"
+        ]
+      ]
+    },
+    "realpath": {
+      "description": "输出规范绝对路径",
+      "subcommands": [
+        [
+          "-e",
+          "路径必须存在"
+        ],
+        [
+          "-m",
+          "允许缺失"
+        ],
+        [
+          "-s",
+          "不解析符号链接"
+        ],
+        [
+          "-z",
+          "NUL 分隔"
+        ]
+      ]
+    },
+    "stat": {
+      "description": "显示文件状态",
+      "subcommands": [
+        [
+          "-c",
+          "自定义格式"
+        ],
+        [
+          "-f",
+          "显示文件系统状态"
+        ],
+        [
+          "-L",
+          "跟随符号链接"
+        ],
+        [
+          "-t",
+          "简洁格式"
+        ]
+      ]
+    },
+    "file": {
+      "description": "识别文件类型",
+      "subcommands": [
+        [
+          "-b",
+          "不显示文件名"
+        ],
+        [
+          "-i",
+          "显示 MIME 类型"
+        ],
+        [
+          "-L",
+          "跟随符号链接"
+        ],
+        [
+          "-s",
+          "读取特殊文件"
+        ]
+      ]
+    },
+    "mktemp": {
+      "description": "创建临时文件或目录",
+      "subcommands": [
+        [
+          "-d",
+          "创建目录"
+        ],
+        [
+          "-p",
+          "指定父目录"
+        ],
+        [
+          "-t",
+          "使用临时目录"
+        ],
+        [
+          "-u",
+          "只生成名称"
+        ]
+      ]
+    },
+    "touch": {
+      "description": "创建文件或更新时间戳",
+      "subcommands": [
+        [
+          "-a",
+          "只改访问时间"
+        ],
+        [
+          "-m",
+          "只改修改时间"
+        ],
+        [
+          "-c",
+          "文件不存在时不创建"
+        ],
+        [
+          "-t",
+          "指定时间"
+        ],
+        [
+          "-d",
+          "日期字符串"
+        ]
+      ]
+    },
+    "unlink": {
+      "description": "删除单个文件",
+      "subcommands": []
+    },
+    "dos2unix": {
+      "description": "转换 CRLF 为 LF",
+      "subcommands": [
+        [
+          "-k",
+          "保留时间戳"
+        ],
+        [
+          "-n",
+          "写入新文件"
+        ],
+        [
+          "-q",
+          "静默"
+        ]
+      ]
+    },
+    "unix2dos": {
+      "description": "转换 LF 为 CRLF",
+      "subcommands": [
+        [
+          "-k",
+          "保留时间戳"
+        ],
+        [
+          "-n",
+          "写入新文件"
+        ],
+        [
+          "-q",
+          "静默"
+        ]
+      ]
+    },
+    "printf": {
+      "description": "按格式输出文本",
+      "subcommands": [
+        [
+          "--help",
+          "显示帮助"
+        ],
+        [
+          "--version",
+          "显示版本"
+        ]
+      ]
+    },
+    "seq": {
+      "description": "生成数字序列",
+      "subcommands": [
+        [
+          "-s",
+          "分隔符"
+        ],
+        [
+          "-f",
+          "浮点格式"
+        ],
+        [
+          "-w",
+          "等宽补零"
+        ]
+      ]
+    },
+    "expr": {
+      "description": "计算表达式或处理字符串",
+      "subcommands": []
+    },
+    "xargs": {
+      "description": "从标准输入构造并执行命令",
+      "subcommands": [
+        [
+          "-0",
+          "NUL 分隔输入"
+        ],
+        [
+          "-n",
+          "每次传入参数数"
+        ],
+        [
+          "-I",
+          "替换字符串"
+        ],
+        [
+          "-d",
+          "输入分隔符"
+        ],
+        [
+          "-r",
+          "无输入时不执行"
+        ],
+        [
+          "-t",
+          "执行前显示命令"
+        ],
+        [
+          "-P",
+          "并行进程数"
+        ]
+      ]
+    },
+    "dd": {
+      "description": "按块复制并转换数据",
+      "subcommands": [
+        [
+          "if=",
+          "输入文件"
+        ],
+        [
+          "of=",
+          "输出文件"
+        ],
+        [
+          "bs=",
+          "块大小"
+        ],
+        [
+          "count=",
+          "复制块数"
+        ],
+        [
+          "skip=",
+          "跳过输入块"
+        ],
+        [
+          "seek=",
+          "跳过输出块"
+        ],
+        [
+          "status=",
+          "显示进度"
+        ],
+        [
+          "conv=",
+          "转换选项"
+        ]
+      ]
+    }
+  }
+}

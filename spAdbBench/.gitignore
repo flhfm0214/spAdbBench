@@ -1,0 +1,14 @@
+.venv/
+.deps/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+data/
+config/settings.json
+Screenshots/
+platform-tools/
+build/
+dist/
+APKs/
+dist/*.zip
+vendor/scrcpy/reference/

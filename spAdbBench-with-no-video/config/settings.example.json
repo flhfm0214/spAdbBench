@@ -1,0 +1,14 @@
+{
+  "adb_path": "",
+  "default_serial": "",
+  "metrics_interval_ms": 1000,
+  "device_poll_ms": 1000,
+  "theme": "dark",
+  "auto_refresh_devices": true,
+  "detection_settings_version": 3,
+  "theme_settings_version": 2,
+  "save_dir": "",
+  "snapshot_dir": "",
+  "script_dir": "",
+  "screenshot_dir": ""
+}

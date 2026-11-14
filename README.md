@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>面向 Android 调试与设备管理的 Windows 桌面工具箱</strong><br>
-  设备连接 · 应用管理 · 文件传输 · 屏幕控制 · 性能监控 · 自动化
+  设备连接 · 应用管理 · 文件传输 · 屏幕控制 · 性能监控
 </p>
 
 <p align="center">
@@ -56,11 +56,9 @@ spAdbBench 是一个使用 PySide6 构建的 Android 桌面工具箱，把 ADB�
 - `|` 之后补全 `grep`、`sed`、`awk`、`cut`、`sort`、`uniq`、`head`、`tail`、`wc`、`xargs` 等管道命令及常用选项。
 - `F1` 打开终端使用指南，下方命令速查支持按命令、语法或说明搜索，双击结果切换模式并填入输入框。
 
-| 输入后按 Tab | 补全结果 |
+| 操作 | 结果 |
 | --- | --- |
-| `pm list pack` | `pm list packages` |
-| `settings get g` | `settings get global` |
-| `pm list packages \| gr` | `pm list packages \| grep` |
+| 输入 `se`，按 `Tab` | 列出 `settings`、`setprop`、`sed`、`service`、`seq` 共 5 个候选及语法 |
 
 补全规则保存在 `config/completions/`，可以编辑 `commands.json` 或新增 `<命令>.json`，保存后回到终端按 `Tab` 自动加载。
 
@@ -68,7 +66,7 @@ spAdbBench 是一个使用 PySide6 构建的 Android 桌面工具箱，把 ADB�
   <img src="spAdbBench/packaging/terminal-completion.png" width="100%" alt="终端 Tab 补全界面">
 </p>
 
-<p align="center"><sub>输入 pm list pack 后按 Tab，补全为 pm list packages</sub></p>
+<p align="center"><sub>只输入 se 后按 Tab，终端列出候选命令与语法</sub></p>
 
 ## 功能特性
 

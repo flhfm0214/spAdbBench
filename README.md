@@ -99,19 +99,21 @@ spAdbBench 是一个使用 PySide6 构建的 Android 桌面工具箱，把 ADB�
 
 > **请以管理员身份运行安装程序。** 右键安装包，选择 **以管理员身份运行**。
 
-| 版本 | 安装包 |
-| --- | --- |
-| 完整版 | `spAdbBench-Setup-1.0.0.exe` |
-| 轻量版 | `spAdbBench-no-video-Setup-1.0.0.exe` |
+| 版本 | 形式 | 文件 | 使用方式 |
+| --- | --- | --- | --- |
+| 完整版 | 安装版 | `spAdbBench-Setup-1.0.0.exe` | 右键 Setup，以管理员身份运行，自选安装目录 |
+| 完整版 | 便携版 | `spAdbBench-1.0.0.zip` | 解压后运行 `spAdbBench\spAdbBench.exe` |
+| 轻量版 | 安装版 | `spAdbBench-no-video-Setup-1.0.0.exe` | 右键 Setup，以管理员身份运行，自选安装目录 |
+| 轻量版 | 便携版 | `spAdbBench-no-video-1.0.0.zip` | 解压后运行 `spAdbBench-no-video\spAdbBench-no-video.exe` |
 
-从 [Releases](https://github.com/flhfm0214/spAdbBench/releases/latest) 下载安装版或便携版。
+从 [Releases](https://github.com/flhfm0214/spAdbBench/releases/latest) 下载对应版本。
 
 1. 右键对应的 `Setup` 文件，选择 **以管理员身份运行**。
 2. 在安装向导中选择安装目录。
 3. 按向导完成安装并启动程序。
 4. 首次启动时在 Windows UAC 提示中选择 **是**。
 
-完整版安装包内置 ADB、Fastboot 与 scrcpy 运行环境，轻量版安装包内置 ADB 与 Fastboot，启动后自动识别设备。便携版解压后运行 `spAdbBench.exe` 或 `spAdbBench-no-video.exe`。
+两个便携版分别解压后直接运行：完整版为 `spAdbBench\spAdbBench.exe`，轻量版为 `spAdbBench-no-video\spAdbBench-no-video.exe`。完整版安装包内置 ADB、Fastboot 与 scrcpy 运行环境，轻量版安装包内置 ADB 与 Fastboot，启动后自动识别设备。
 
 ### ADB / Fastboot 驱动
 
@@ -126,7 +128,6 @@ Platform-Tools 提供 `adb` 和 `fastboot`，USB Driver 负责让 Windows 识别
 | OEM USB Drivers | 各品牌 Android 设备驱动 | [下载](https://developer.android.com/studio/run/oem-usb) |
 
 安装驱动后重新连接设备，再点击应用顶部的 **刷新设备**。
-
 
 ## 使用说明
 

@@ -104,12 +104,29 @@ spAdbBench 是一个使用 PySide6 构建的 Android 桌面工具箱，把 ADB�
 | 完整版 | `spAdbBench-Setup-1.0.0.exe` |
 | 轻量版 | `spAdbBench-no-video-Setup-1.0.0.exe` |
 
+从 [Releases](https://github.com/flhfm0214/spAdbBench/releases/latest) 下载安装版或便携版。
+
 1. 右键对应的 `Setup` 文件，选择 **以管理员身份运行**。
 2. 在安装向导中选择安装目录。
 3. 按向导完成安装并启动程序。
 4. 首次启动时在 Windows UAC 提示中选择 **是**。
 
 完整版安装包内置 ADB、Fastboot 与 scrcpy 运行环境，轻量版安装包内置 ADB 与 Fastboot，启动后自动识别设备。便携版解压后运行 `spAdbBench.exe` 或 `spAdbBench-no-video.exe`。
+
+### ADB / Fastboot 驱动
+
+> **应用无法识别设备，或 ADB / Fastboot 无法运行时，请先下载并安装驱动。**
+
+Platform-Tools 提供 `adb` 和 `fastboot`，USB Driver 负责让 Windows 识别 Android 设备。建议两项都安装完成后重新连接设备。
+
+| 组件 | 用途 | 下载地址 |
+| --- | --- | --- |
+| Android SDK Platform-Tools | 提供 `adb.exe`、`fastboot.exe` | [下载](https://developer.android.com/tools/releases/platform-tools) |
+| Google USB Driver | Windows 识别 Google / AOSP 设备 | [下载](https://developer.android.com/studio/run/win-usb) |
+| OEM USB Drivers | 各品牌 Android 设备驱动 | [下载](https://developer.android.com/studio/run/oem-usb) |
+
+安装驱动后重新连接设备，再点击应用顶部的 **刷新设备**。
+
 
 ## 使用说明
 

@@ -205,23 +205,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build_installer.ps
 
 ## 项目结构
 
-```text
-spAdbBench/
-├─ spAdbBench/                    # 完整版源码
-│  ├─ adbtool/
-│  │  ├─ channels/                # scrcpy 服务、视频与控制通道
-│  │  ├─ infrastructure/          # 配置、路径、进程、主题、日志
-│  │  ├─ services/                # ADB、应用、电池、刷机、快照等服务
-│  │  └─ ui/                      # 主窗口、页面、控件与对话框
-│  ├─ config/                     # 设置模板与命令补全数据
-│  ├─ packaging/                  # PyInstaller、Inno Setup、图标、版本信息
-│  ├─ scripts/                    # 构建、安装包与验证脚本
-│  ├─ tests/                      # 自动化测试
-│  └─ main.py
-├─ spAdbBench-with-no-video/      # 轻量版源码
-├─ build_release.ps1              # 双版本发布构建
-└─ README.md
-```
+| 路径 | 说明 |
+| --- | --- |
+| `spAdbBench/` | 完整版源码。包含 `adbtool/` 应用代码、`config/` 配置与补全数据、`packaging/` 打包资源、`scripts/` 构建脚本、`tests/` 测试和 `main.py` 入口。 |
+| `spAdbBench-with-no-video/` | 轻量版源码。目录结构与完整版一致，聚焦设备管理与调试功能，安装体积更小。 |
+| `README.md` | 项目说明，包含功能、版本、安装、使用、驱动和构建说明。 |
+| `build_release.ps1` | 发布构建脚本。生成两个版本的 EXE、安装包、ZIP 和 SHA256 校验文件。 |
+| `.gitignore` | Git 忽略规则，用于排除虚拟环境、构建产物、运行数据和本地配置。 |
 
 ## 使用的开源项目
 

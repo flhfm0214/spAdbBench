@@ -85,3 +85,5 @@ Write-Host ("Version: {0}" -f $Version)
 if ($zipPath) {
     Write-Host ("Archive: {0}" -f $zipPath)
 }
+
+exit 0

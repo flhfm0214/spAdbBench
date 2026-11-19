@@ -1,9 +1,9 @@
-﻿; spAdbBench installer template (Inno Setup 6)
+; spAdbBench installer template (Inno Setup 6)
 ; Build with:
-;   ISCC.exe /DAppVersion=1.0.0 installer.iss
+;   ISCC.exe /DAppVersion=1.0.1 installer.iss
 
 #ifndef AppVersion
-  #define AppVersion "1.0.0"
+  #define AppVersion "1.0.1"
 #endif
 
 #define AppName "spAdbBench"
@@ -43,7 +43,7 @@ WizardStyle=modern
 ShowLanguageDialog=no
 CloseApplications=yes
 RestartApplications=no
-VersionInfoVersion=1.0.0.0
+VersionInfoVersion=1.0.1.0
 VersionInfoTextVersion={#AppVersion}
 VersionInfoProductName={#AppName}
 VersionInfoProductVersion={#AppVersion}

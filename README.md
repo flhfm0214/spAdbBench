@@ -14,7 +14,7 @@
   <img alt="Python" src="https://img.shields.io/badge/Python-3.14-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white">
   <img alt="PySide6" src="https://img.shields.io/badge/PySide6-6.12-41CD52?style=flat-square&amp;logo=qt&amp;logoColor=white">
   <img alt="ADB" src="https://img.shields.io/badge/ADB-Fastboot-3DDC84?style=flat-square&amp;logo=android&amp;logoColor=white">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-orange?style=flat-square">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-orange?style=flat-square">
 </p>
 
 ## 简介
@@ -101,10 +101,10 @@ spAdbBench 是一个使用 PySide6 构建的 Android 桌面工具箱，把 ADB�
 
 | 版本 | 形式 | 文件 | 使用方式 |
 | --- | --- | --- | --- |
-| 完整版 | 安装版 | `spAdbBench-Setup-1.0.0.exe` | 右键 Setup，以管理员身份运行，自选安装目录 |
-| 完整版 | 便携版 | `spAdbBench-1.0.0.zip` | 解压后运行 `spAdbBench\spAdbBench.exe` |
-| 轻量版 | 安装版 | `spAdbBench-no-video-Setup-1.0.0.exe` | 右键 Setup，以管理员身份运行，自选安装目录 |
-| 轻量版 | 便携版 | `spAdbBench-no-video-1.0.0.zip` | 解压后运行 `spAdbBench-no-video\spAdbBench-no-video.exe` |
+| 完整版 | 安装版 | `spAdbBench-Setup-1.0.1.exe` | 右键 Setup，以管理员身份运行，自选安装目录 |
+| 完整版 | 便携版 | `spAdbBench-1.0.1.zip` | 解压后运行 `spAdbBench\spAdbBench.exe` |
+| 轻量版 | 安装版 | `spAdbBench-no-video-Setup-1.0.1.exe` | 右键 Setup，以管理员身份运行，自选安装目录 |
+| 轻量版 | 便携版 | `spAdbBench-no-video-1.0.1.zip` | 解压后运行 `spAdbBench-no-video\spAdbBench-no-video.exe` |
 
 从 [Releases](https://github.com/flhfm0214/spAdbBench/releases/latest) 下载对应版本。
 

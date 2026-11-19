@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import warnings
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -27,6 +28,9 @@ class AdbProcess(QObject):
     output = Signal(str)
     error_output = Signal(str)
     finished = Signal(object)
+    # Internal lifecycle signal: ``finished`` intentionally carries only the
+    # result, but services need the process object to retire it safely.
+    completed = Signal(object, object)
 
     def __init__(self, parent: QObject | None = None) -> None:
         super().__init__(parent)
@@ -39,6 +43,7 @@ class AdbProcess(QObject):
         self._emitted = False
         self._args: tuple[str, ...] = ()
         self._stdout_file: Path | None = None
+        self._capture_output = True
 
     @property
     def is_running(self) -> bool:
@@ -49,6 +54,7 @@ class AdbProcess(QObject):
         argv: list[str],
         timeout_ms: int = 30000,
         stdout_file: Path | str | None = None,
+        capture_output: bool = True,
     ) -> None:
         if not argv:
             raise ValueError("argv 不能为空")
@@ -62,6 +68,7 @@ class AdbProcess(QObject):
         self._emitted = False
         self._args = tuple(argv)
         self._stdout_file = Path(stdout_file) if stdout_file is not None else None
+        self._capture_output = bool(capture_output)
 
         process = QProcess(self)
         process.setProgram(argv[0])
@@ -93,14 +100,15 @@ class AdbProcess(QObject):
 
     def wait(self, timeout_ms: int = 1500) -> None:
         """Finish a cancelled process during window shutdown only."""
-        if self._process is None:
+        process = self._process
+        if process is None:
             return
-        if self._process.state() != QProcess.ProcessState.NotRunning:
-            self._process.waitForFinished(timeout_ms)
-        if self._process.state() != QProcess.ProcessState.NotRunning:
-            self._process.kill()
-            self._process.waitForFinished(500)
-        if not self._emitted:
+        if process.state() != QProcess.ProcessState.NotRunning:
+            process.waitForFinished(timeout_ms)
+        if process.state() != QProcess.ProcessState.NotRunning:
+            process.kill()
+            process.waitForFinished(500)
+        if self._process is process and not self._emitted:
             self._finish(-1)
 
     def _read_stdout(self) -> None:
@@ -108,7 +116,8 @@ class AdbProcess(QObject):
             return
         chunk = bytes(self._process.readAllStandardOutput()).decode("utf-8", "replace")
         if chunk:
-            self._stdout.append(chunk)
+            if self._capture_output:
+                self._stdout.append(chunk)
             self.output.emit(chunk)
 
     def _read_stderr(self) -> None:
@@ -116,7 +125,8 @@ class AdbProcess(QObject):
             return
         chunk = bytes(self._process.readAllStandardError()).decode("utf-8", "replace")
         if chunk:
-            self._stderr.append(chunk)
+            if self._capture_output:
+                self._stderr.append(chunk)
             self.error_output.emit(chunk)
 
     def _on_timeout(self) -> None:
@@ -153,4 +163,24 @@ class AdbProcess(QObject):
             cancelled=self._cancelled,
             args=self._args,
         )
+        process, self._process = self._process, None
+        timer, self._timer = self._timer, None
+        if timer is not None:
+            timer.stop()
+            timer.deleteLater()
+        if process is not None:
+            process.deleteLater()
+        self._stdout.clear()
+        self._stderr.clear()
         self.finished.emit(result)
+        # Callers often use ``lambda result, p=process: ...`` to identify the
+        # sender.  That closure forms a reference cycle with this object and
+        # would keep it alive after _retired evicts it.  The one-shot signal
+        # has no further use, so drop its connections.
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", RuntimeWarning)
+            try:
+                self.finished.disconnect()
+            except (RuntimeError, TypeError):
+                pass
+        self.completed.emit(self, result)

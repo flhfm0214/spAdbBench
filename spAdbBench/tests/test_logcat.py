@@ -62,8 +62,16 @@ class FakeAdb:
         self.runs: list[FakeProcess] = []
         self.shells: list[tuple[str, str, FakeProcess]] = []
 
-    def run(self, serial, *args, timeout_ms=30000, record=True):
+    def run(
+        self,
+        serial,
+        *args,
+        timeout_ms=30000,
+        record=True,
+        capture_output=True,
+    ):
         process = FakeProcess([serial, *args])
+        process.capture_output = capture_output
         self.runs.append(process)
         return process
 
@@ -83,6 +91,7 @@ def test_session_starts_logcat_and_filters_level_and_keyword():
     process = adb.runs[0]
     assert "-T" in process.argv
     assert "threadtime" in process.argv
+    assert process.capture_output is False
 
     process.output.emit(f"{LINE_INFO}\n{LINE_ERROR}\n{LINE_WARN}\n")
     assert [line.level for line in lines] == ["E", "W"]

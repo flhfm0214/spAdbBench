@@ -82,3 +82,47 @@ def test_adb_service_writes_process_stdout_to_file(qtbot, tmp_path):
     assert destination.read_bytes() == b"png-bytes"
 
 
+def test_process_streams_without_retaining_output(qtbot):
+    process = AdbProcess()
+    chunks = []
+    process.output.connect(chunks.append)
+    with qtbot.waitSignal(process.finished, timeout=5000) as blocker:
+        process.run(
+            [sys.executable, "-c", "print('x' * 5000)"],
+            capture_output=False,
+        )
+
+    result = blocker.args[0]
+    assert result.stdout == ""
+    assert "".join(chunks).strip() == "x" * 5000
+
+
+def test_adb_service_releases_finished_process(qtbot):
+    import gc
+    import weakref
+
+    service = AdbService(Path("adb.exe"))
+    first = service.run_argv(
+        [sys.executable, "-c", "print('ok')"],
+        record=False,
+    )
+    # Mirrors callers that capture the process to identify the sender.
+    first.finished.connect(lambda result, p=first: None)
+    first_ref = weakref.ref(first)
+    qtbot.waitUntil(lambda: not first.is_running, timeout=5000)
+    del first
+
+    for _ in range(39):
+        process = service.run_argv(
+            [sys.executable, "-c", "print('ok')"],
+            record=False,
+        )
+        qtbot.waitUntil(lambda p=process: not p.is_running, timeout=5000)
+
+    qtbot.wait(50)
+    gc.collect()
+    assert service.findChildren(AdbProcess) == []
+    assert len(service._retired) == 32
+    assert first_ref() is None
+
+

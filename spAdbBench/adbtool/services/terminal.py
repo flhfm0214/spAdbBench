@@ -454,6 +454,7 @@ class AdbCommandSession(QObject):
         process = self.adb.run_argv(
             self.adb.build(serial, *cleaned),
             timeout_ms=0,
+            capture_output=False,
         )
         self._process = process
         process.output.connect(self.output.emit)

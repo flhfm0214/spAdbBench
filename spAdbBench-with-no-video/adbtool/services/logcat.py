@@ -163,6 +163,7 @@ class LogcatSession(QObject):
             *args,
             timeout_ms=0,
             record=False,
+            capture_output=False,
         )
         self._process = process
         self._running = True

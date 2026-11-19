@@ -36,9 +36,10 @@ class FakeAdb:
     def build(self, serial, *args):
         return [str(self.adb_path), "-s", serial, *args]
 
-    def run_argv(self, argv, timeout_ms=0, record=True):
+    def run_argv(self, argv, timeout_ms=0, record=True, capture_output=True):
         self.argv = argv
         self.timeout_ms = timeout_ms
+        self.capture_output = capture_output
         return self.process
 
 
@@ -60,6 +61,7 @@ def test_adb_session_strips_adb_prefix_and_runs_selected_serial():
 
     assert adb.argv == ["adb.exe", "-s", "ABC", "devices"]
     assert adb.timeout_ms == 0
+    assert adb.capture_output is False
     assert states == ["执行中…"]
 
 
